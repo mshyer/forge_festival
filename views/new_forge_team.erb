@@ -1,0 +1,21 @@
+<% content_for :main_content do %>
+<form method="POST" action="/forge-teams/new" id="new_team">
+	<fieldset class="column">
+		<h1>Create New Team</h1>
+		<label>Name
+			<input type="text" name="team_name" value="<%=@team_name%>"placeholder="ex: 'The Smelters'" required>
+		</label>
+		<label>Region
+			<input type="text" name="region" value="<%=@region%>" placeholder="ex: 'Freehold'" required>
+		</label>
+		<label>Team Leader
+			<input type="text" name="team_leader" value="<%=@team_leader%>" placeholder="ex: 'Oleg Keenhammer'" required>
+		</label>
+		<div class="row">
+			<button type="submit">Create Team</button>
+			<button type="button" class="redirect"><a href="/rankings">Cancel</a></button>
+		</div>
+	</fieldset>
+	
+</form>
+<% end %>

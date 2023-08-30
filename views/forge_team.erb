@@ -1,0 +1,45 @@
+<% content_for :main_content do %>
+<section id="team_info" class="centered_section">
+	<h1><%=@forge_team["team_name"]%></h1>
+	<p>Team Leader: <%=@forge_team["team_leader"]%></p>
+	<p>Region: <%=@forge_team["region"]%></p>
+	<form method="GET" action="/forge-team/<%=@forge_team_id%>/edit">
+		<button>Edit Forge Team Info</button>
+	</form>
+	<form method="GET" action="/forge-team/<%=@forge_team_id%>/items/new">
+		<button>Create New Item</button>
+	</form>
+	<form method="POST" action="/forge-team/<%=@forge_team_id%>/delete">
+		<button type="submit">Delete Team</button>
+	</form>
+	
+</section>
+<section  id="team_rankings">
+	<h1>Items (click to edit)</h1>
+	<ol class="paginated">
+		<% @items.each do |item| %>
+			<li>
+				<a href="/forge-team/<%=@forge_team_id%>/item/<%=item["id"]%>/edit" class="ranked_item">
+				<p><%=item["item_name"]%></p>
+				<p>Type: <%=item["type"]%></p>
+				<p>Score: <%=item["score"]%></p>
+				</a>
+			</li>
+		<% end %>
+	</ol>
+
+	<% if @num_pages > 1%>
+		<ul class="pagination_row">
+			<% if @page != 1%>
+				<li><a href="/forge-team/<%=@forge_team_id%>?page=<%=@page - 1%>">Previous page</a></li>
+			<% end %>
+			<% @num_pages.times do |i|%>
+				<li><a href="/forge-team/<%=@forge_team_id%>?page=<%=i + 1%>"><%=i + 1%></a></li>
+			<% end %>
+			<% if @page != @num_pages%>
+				<li><a href="/forge-team/<%=@forge_team_id%>?page=<%=@page + 1%>">next page</a></li>
+			<% end %>
+		</ul>
+	<% end %>
+</section>
+<% end %>

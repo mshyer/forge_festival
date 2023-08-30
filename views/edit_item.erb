@@ -1,0 +1,27 @@
+<% content_for :main_content do %>
+<form method="POST" action="/forge-team/<%=@forge_team_id%>/item/<%=@item_id%>/edit" id="edit_team">
+	<fieldset class="column">
+		<h1>Editing Item: <%=@original_item_name%></h1>
+		<label>Item Name
+			<input type="text" name="item_name" value="<%=@item_name%>" placeholder="ex: 'Sword of Destiny'">
+		</label>
+		<label>Type
+			<input type="text" name="type" value="<%=@type%>" placeholder="ex: 'Sword'">
+		</label>
+		<div class="row">
+			<label>Quality
+				<input type="number" name="quality" value="<%=@quality%>" step="1" min="1" max="10">
+			</label>
+			<label>Beauty
+				<input type="number" name="beauty" value="<%=@beauty%>" step="1" min="1" max="10">
+			</label>
+		</div>
+		<div class="row">
+			<button type="submit">Update Info</button>
+			<button type="button" class="redirect"><a href="/forge-team/<%=@forge_team_id%>">Cancel</a></button>
+			<button formmethod="POST" formaction="/forge-team/<%=@forge_team_id%>/item/<%=@item_id%>/delete">Delete Item</button>
+		</div>
+	</fieldset>
+	
+</form>
+<% end %>

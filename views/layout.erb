@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+<head>
+  <title>your page title goes here</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+
+	<div class="container">
+	<header>
+		<a href="/"><img src="/logo.png" class="logo"></a>
+		<section class="header">
+			<h1>Forge Festival</h1>
+			<p>May the best forge team win!</p>
+			<ul class="row">
+				<li>
+					<a href="/about">About</a>
+				</li>
+				<li>
+					<a href="/rankings">Rankings</a>
+				</li>
+				<li>
+					<% if !user? %>
+						<a href="/login">Log In</a>
+					<% else %>
+						<form method="POST" action="/logout">
+						<button type="submit" class="nav_button"><a>Log Out</a></button>
+						</form>
+					<% end %>
+				</li>
+			
+				
+			</ul>
+		</section>
+	</header>
+	<% if session[:success]%>
+	<div class="flash_message">
+		<ul>
+			<li><%=session[:success]%></li>
+		</ul>
+		<% session.delete(:success) %>
+		<% session.delete(:url_hop) %>
+	</div>
+	<% end %>
+	<% if session[:error]%>
+	<div class="flash_message">
+		<span>Error: </span>
+		<ul>
+			<% session[:error].each do |error| %>
+			<li><%=error%></li>
+			<% end %>
+		</ul>
+		<% session.delete(:error) %>
+	</div>
+	<% end %>
+	<main>
+		<div id="main-content">
+			<%== yield_content :main_content%>
+		</div>
+
+	</main>
+	<ul>
+		<li></li>
+	</ul>
+	</div>
+</body>
+</html>

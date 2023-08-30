@@ -1,0 +1,36 @@
+<% content_for :main_content do %>
+<section  class="centered_section" id="team_rankings">
+	<h1>Teams</h1>
+	<p>Click team for more info</p>
+
+	<ol class="paginated">
+		<% @forge_teams.each do |team|  %>
+		<li>
+			<a href="/forge-team/<%=team["id"]%>" class="ranked_item">
+				<p><%=team["team_name"]%></p>
+				<p>Region: <%=team["region"]%></p>
+				<p>Team Leader: <%=team["team_leader"]%></p>
+				<p>Score: <%=team["score"]%></p>
+			</a>
+		</li>
+		<%  end %>
+	</ol>
+	<form method="GET" action="/forge-teams/new" id="create_team">
+		<button>Create New Team</button>
+	</form>
+	<% if @num_pages > 1%>
+		<ul class="pagination_row">
+			<% if @page != 1%>
+				<li><a href="/rankings?page=<%=@page - 1%>">Previous page</a></li>
+			<% end %>
+			<% @num_pages.times do |i|%>
+				<li><a href="/rankings?page=<%=i + 1%>"><%=i + 1%></a></li>
+			<% end %>
+			<% if @page != @num_pages%>
+				<li><a href="/rankings?page=<%=@page + 1%>">next page</a></li>
+			<% end %>
+		</ul>
+	<% end %>
+</section>
+
+<% end %>

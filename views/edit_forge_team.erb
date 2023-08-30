@@ -1,0 +1,21 @@
+<% content_for :main_content do %>
+<form method="POST" action="/forge-team/<%=@forge_team_id%>/edit" id="edit_team">
+	<fieldset class="column">
+		<h1>Editing Forge Team: <%=@original_team_name%></h1>
+		<label>Name
+			<input type="text" name="team_name" value="<%=@team_name%>"placeholder="ex: 'The Smelters'">
+		</label>
+		<label>Region
+			<input type="text" name="region" value="<%=@region%>" placeholder="ex: 'Freehold'">
+		</label>
+		<label>Team Leader
+			<input type="text" name="team_leader" value="<%=@team_leader%>" placeholder="ex: 'Oleg Keenhammer'">
+		</label>
+		<div class="row">
+			<button type="submit">Update Info</button>
+			<button type="button" class="redirect"><a href="/forge-team/<%=@forge_team_id%>">Cancel</a></button>
+
+		</div>
+	</fieldset>
+</form>
+<% end %>

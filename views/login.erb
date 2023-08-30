@@ -1,0 +1,17 @@
+<% content_for :main_content do %>
+<form method="POST" action="/login" id="login">
+	<fieldset class="column">
+		<h1>Log In</h1>
+		<label>Username
+			<input type="text" name="username" value="<%=@username%>" required>
+		</label>
+		<label>Password
+			<input type="password" name="password" value="<%=@password%>" required>
+		</label>
+		<div class="row">
+			<button type="submit">Log In</button>
+		</div>
+	</fieldset>
+	
+</form>
+<% end %>
