@@ -1,5 +1,5 @@
 # FORGE FESTIVAL #
-![homepage](./forge_festival_screenshot.png)
+![homepage](./public/forge_festival_screenshot.png)
 ## DESCRIPTION ##
 Forge Festival is a fantasy-themed CRUD web application. It is a website that allows you to create collections ("teams" AKA "forge teams"), and objects ("items") for each collection. There is a One-to-Many relationship between teams and items. 
 
