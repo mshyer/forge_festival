@@ -1,11 +1,15 @@
 # FORGE FESTIVAL #
+<<<<<<< HEAD
 ![homepage](./public/forge_festival_screenshot.png)
+=======
+![homepage](./public/logo.png)
+>>>>>>> b441be8 (update readme)
 ## DESCRIPTION ##
 Forge Festival is a fantasy-themed CRUD web application. It is a website that allows you to create collections ("teams" AKA "forge teams"), and objects ("items") for each collection. There is a One-to-Many relationship between teams and items. 
-
+![homepage](./public/teams.png)
 ## PREMISE ##
 Dwarves (well known to be expert miners and smiths) gather from across the land once a decade to compete in FORGE FESTIVAL. During this competition, "forge teams" compete to create the best items. Created items are judged by two categories: quality and beauty. 
-
+![homepage](./public/edit_item.png)
 This website is designed to keep track of the teams, items, and their respective scores, during the competition. 
 
 ## SORTING TEAMS AND ITEMS ##

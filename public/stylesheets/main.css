@@ -53,6 +53,7 @@ fieldset.column * {
 	flex-direction: column;
 	align-items: center;
 	margin-bottom: 10px;
+  margin-left: -35px;
 }
 
 ol.paginated {
@@ -60,6 +61,11 @@ ol.paginated {
 	min-height: 370px;
 	text-overflow: ellipsis;
 }
+
+ol.paginated li {
+  margin-top: 5px;
+}
+
 ol.paginated li p {
 	white-space: nowrap;
 	overflow: hidden;
