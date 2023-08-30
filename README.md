@@ -33,13 +33,6 @@ Personal computer info: ARM Mac M1
 Browser used to test: Chrome: Version 106.0.5249.119 (Official Build) (arm64)
 Postgres database info: PostgreSQL 14.5 (Homebrew) on aarch64-apple-darwin21.6.0, compiled by Apple clang version 13.1.6 (clang-1316.0.21.2.5), 64-bit
 
-## CHOICES I MADE ##
-This CRUD app allows you to create read update and delete collections and objects. I chose not to give "items" their own "read" page, as information about items is listed on the collection route "forge-team/:forge_team_id" and the edit route. When you click on an individual item, it will take you to an "edit" page, rather than a "read" page, for this reason. Objects and collections can both be deleted from their EDIT routes. 
-
-Each team must have a unique name across the competition. Each item must also have a unique name across the competition (thematically, these dwarves like to give their forged weapons and armor unique and cool names). Everything else can be repeated (ex two teams can have team leaders with the same name and region).
-
-Pagination buttons only appear if there are more than 5 objects to display. Depending on your screen size, you may have to scroll to see the pagination buttons. 
-
 ### A NOTE ON NAMES ###
 I used https://www.fantasynamegenerators.com to help generate names for the seed data. You can generate dwarf names using: https://www.fantasynamegenerators.com/dwarf-names.php. You can also use their website to generate weapon names, armor names and blacksmith names, etc. 
 
