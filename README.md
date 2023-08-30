@@ -12,7 +12,7 @@ This website is designed to keep track of the teams, items, and their respective
 Teams and items on the website are sorted according to *score*. Score is calculated as follows:
 "Quality" and "Beauty" for items are measured on an integer scale from 1-10. However, as Dwarves have very high standards, only values above 6 count towards the score. Each value above 6 awards 1 point. For example, a sword of quality 8 and beauty 7 awards 3 points. Armor of quality 1 and beauty 8 awards two points. There is no difference in the way different categories of items are scored (for example, daggers are treated the same as battleaxes, and both are treated the same as shields). The maximum assessed score for an item is 8 (if it has quality 10 and beauty 10). Items with assessed score 0 are still listed.
 
-Items are sorted according to assessed item score (desc) and then name (desc). EX an item with score 2 will be listed before an item of score 1. If items have the same score, the name beggining with letter "z" will appear before the letter "a".
+Items are sorted according to assessed item score (desc) and then name (desc). EX an item with score 2 will be listed before an item of score 1. If items have the same score, the name beginning with letter "z" will appear before the letter "a".
 
 Teams are sorted in a similar way. Teams with the highest total score (the sum of their item scores) are listed first. Teams with the same score are then sorted in reverse alphabetical order. Max 5 items/teams are listed per page. 
 
